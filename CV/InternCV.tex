@@ -1,90 +1,94 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage{geometry}
-\geometry{margin=1in}
+\geometry{margin=0.6in, top=0.5in, bottom=0.5in}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{titlesec}
 \usepackage{parskip}
-\usepackage{newtxtext,newtxmath} % XeLaTeX용 Times 스타일
+\usepackage{newtxtext,newtxmath}
 
-\titleformat{\section}{\large\bfseries}{}{0em}{}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue!60!black}
+
+\titleformat{\section}{\large\bfseries\vspace{2pt}}{}{0em}{}[\vspace{-4pt}\rule{\linewidth}{0.4pt}]
+\titlespacing{\section}{0pt}{8pt}{4pt}
+
+\setlist[itemize]{leftmargin=*, itemsep=1pt, parsep=0pt, topsep=2pt}
+\setlist[enumerate]{leftmargin=*, itemsep=3pt, parsep=0pt, topsep=2pt}
+
+\setlength{\parskip}{0pt}
+
+\pagestyle{empty}
 
 \begin{document}
 
 \begin{center}
   {\LARGE \textbf{Jaemin Kim}} \\[4pt]
-  \href{mailto:abcdvd@yonsei.ac.kr}{abcdvd@yonsei.ac.kr} \\
-  Department of Physics, Yonsei University, Seoul, South Korea \\
+  Department of Physics, Yonsei University, Seoul, South Korea \\[2pt]
+  \href{mailto:abcdvd131@gmail.com}{abcdvd131@gmail.com}
+  \quad$\cdot$\quad
+  \href{https://github.com/abcdvd}{GitHub}
+  \quad$\cdot$\quad
+  \href{https://abcdvd.github.io}{Homepage}
 \end{center}
 
-\noindent\rule{\linewidth}{0.4pt}
-
 \section*{Education}
-\textbf{Yonsei University}, Seoul, South Korea \\
-B.S. in Physics, College of Science \hfill Mar. 2021 -- Present \\
-\begin{itemize}[leftmargin=*]
-  \item GPA: 3.69 / 4.3
-  \item Military service: May. 2022 -- Nov. 2023
-  \item Academic Excellence Scholarship (50\% tuition waiver), Spring 2024
+\textbf{Yonsei University}, Seoul, South Korea \hfill Mar. 2021 -- Present \\
+B.S. in Physics, College of Science
+\begin{itemize}
+  \item GPA: 3.69\,/\,4.3 \quad|\quad Academic Excellence Scholarship (50\% tuition waiver), Spring 2024
+  \item Military service: May 2022 -- Nov. 2023
 \end{itemize}
-
-\noindent\rule{\linewidth}{0.4pt}
 
 \section*{Research Experience}
-\textbf{CIPLAB (Computational Intelligence \& Photography Lab)}, Yonsei University \\
-Research Intern, advised by Prof.\ Seon Joo Kim \hfill Jun. 2025 -- Present
-\begin{itemize}[leftmargin=*]
-  \item Research on computational photography and image restoration.
-  \item 3rd Place, NTIRE 2026 Challenge on Learned Smartphone ISP with Unpaired Data (CVPR 2026 Workshop)
+\textbf{CIPLAB} (Computational Intelligence \& Photography Lab), Yonsei University \hfill Jun. 2025 -- Present \\
+Research Intern, advised by Prof.\ Seon Joo Kim
+\begin{itemize}
+  \item Research on computational photography, image restoration, and diffusion models.
+  \item 3rd Place, NTIRE 2026 Challenge on Learned Smartphone ISP with Unpaired Data (CVPR 2026)
 \end{itemize}
-
-\noindent\rule{\linewidth}{0.4pt}
 
 \section*{Publications}
-\begin{itemize}[leftmargin=*]
-  \item Jihye Yoo, \textbf{Jaemin Kim}, Jinwoo Kim, Seon Joo Kim. ``\href{https://openreview.net/forum?id=zKyrO2WDA0}{Tone-Aware Diffusion: Enabling Tone-on-Tone and Tone-in-Tone Generation}.'' HiGen Workshop @ CVPR 2026. \textbf{Best Paper Runner-up.}
-\end{itemize}
-
-\noindent\rule{\linewidth}{0.4pt}
+\begin{enumerate}[label={[\arabic*]}]
+  \item Jihye Yoo, \textbf{Jaemin Kim}, Jinwoo Kim, Seon Joo Kim.
+    ``\href{https://openreview.net/forum?id=zKyrO2WDA0}{Tone-Aware Diffusion: Enabling Tone-on-Tone and Tone-in-Tone Generation}.''
+    HiGen Workshop @ CVPR 2026. \textbf{Best Paper Runner-up.}
+  \item \textbf{Jaemin Kim}, Jinwoo Kim, Seon Joo Kim.
+    ``Freeze the Structure, Free the Color: Fourier-Domain Training for Unpaired Smartphone ISP.''
+    NTIRE Workshop @ CVPR 2026. \textbf{3rd Place, NTIRE 2026 Challenge.}
+\end{enumerate}
 
 \section*{Research Interests}
 Computational Photography, Image Restoration, Diffusion Models, Reinforcement Learning, Physical Simulation
 
-\noindent\rule{\linewidth}{0.4pt}
-
 \section*{Projects}
-\subsection*{\href{https://www.youtube.com/watch?v=gmeZ6BD5u0w}{Autonomous Indoor Flight of Tello Drone using CrossFormer} \hfill \normalfont Yonsei Drone Club}
-
-\begin{itemize}[leftmargin=*]
-  \item Designed and implemented a vision-based indoor autonomous navigation system for a Tello drone using the CrossFormer model.
+\textbf{\href{https://www.youtube.com/watch?v=gmeZ6BD5u0w}{Autonomous Indoor Flight of Tello Drone using CrossFormer}} \hfill Yonsei Drone Club
+\begin{itemize}
+  \item Designed a vision-based indoor autonomous navigation system using the CrossFormer model.
   \item Contributed to data collection, inference code development, and test flights.
 \end{itemize}
 
-\subsection*{\href{https://github.com/abcdvd/snake-game-reinforcement-learning}{Reinforcement Learning for Snake Game} \hfill \normalfont Personal Project}
+\smallskip
 
-\begin{itemize}[leftmargin=*]
+\textbf{\href{https://github.com/abcdvd/snake-game-reinforcement-learning}{Reinforcement Learning for Snake Game}} \hfill Personal Project
+\begin{itemize}
   \item Built a reinforcement learning agent using PyTorch to learn the classic Snake game.
 \end{itemize}
 
-\subsection*{\href{https://github.com/abcdvd/league-of-legends-winner-predicting}{Real-Time Win Prediction for League of Legends} \hfill \normalfont Personal Project}
-\begin{itemize}[leftmargin=*]
-  \item Collected match data using Riot Games API.
-  \item Built a win-rate prediction model using in-game data.
-\end{itemize}
+\smallskip
 
-\noindent\rule{\linewidth}{0.4pt}
+\textbf{\href{https://github.com/abcdvd/league-of-legends-winner-predicting}{Real-Time Win Prediction for League of Legends}} \hfill Personal Project
+\begin{itemize}
+  \item Collected match data using Riot Games API and built a win-rate prediction model.
+\end{itemize}
 
 \section*{Technical Skills}
-\begin{itemize}[leftmargin=*]
-  \item Programming Languages: Python (TensorFlow, PyTorch)
-  \item Tools: Jax, Git, Linux
+\begin{itemize}
+  \item \textbf{Languages:} Python (PyTorch, TensorFlow, JAX) \quad|\quad \textbf{Tools:} Git, Linux
 \end{itemize}
 
-\noindent\rule{\linewidth}{0.4pt}
-
-\section*{Activities}
-\begin{itemize}[leftmargin=*]
-  \item 15th place, Yonsei University Algorithm Programming Contest, 2023
+\section*{Awards \& Activities}
+\begin{itemize}
+  \item 15th Place, Yonsei University Algorithm Programming Contest, 2023
 \end{itemize}
 
 \end{document}
